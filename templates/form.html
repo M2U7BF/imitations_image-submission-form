@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
         <p>タイトル：<input type="text" name="title"></p>
         <p>メモ：<input type="text" name="memo"></p>
+        <p>画像：<input type="file" name="image"></p>
         <!--submit だと送信ボタンになる (https://developer.mozilla.org/ja/docs/Web/HTML/Element/input/submit)-->
         <input type="submit" value="投稿する">
 </form>

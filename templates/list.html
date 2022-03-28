@@ -5,6 +5,12 @@
         <!--post.titleという変数の展開(https://e-tec-memo.herokuapp.com/article/67/)-->
         <p>タイトル：{{ post.title }}</p>
         <p>メモ：{{ post.memo }}</p>
+        {% if post.image %}
+            <div>
+                <!--表示サイズ(https://www.nishishi.com/css/resize-image-keep-aspect-ratio.html)-->
+                <img src="/media/{{ post.image }}" alt="画像が表示できません" style="width:31%;height: auto;">
+            </div>
+        {% endif %}
         <p>------------------------</p>
     </div>
     {% endfor %}

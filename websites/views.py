@@ -25,6 +25,6 @@ class FormClass(CreateView):
     template_name = 'form.html'
     # DBに反映するためにモデルもセット
     model = PostModel
-    fields = ('title','memo')
+    fields = ('title','memo','image')
     # 投稿完了時の遷移先
     success_url = reverse_lazy('list')
